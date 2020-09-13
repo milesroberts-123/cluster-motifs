@@ -3,7 +3,7 @@ Cluster redundant motifs in a set of motifs
 
 The motifs returned by *de novo* motif discovery algorithms are often numerous and redundant, making downstream motif analyses more difficult. This repo presents a simple function written in R to combine redundant motifs. The approach is based on hierarchical clustering and uses a bootstrapping approach implemented in [pvclust](https://cran.r-project.org/web/packages/pvclust/pvclust.pdf) to avoid the issue of having to manually choose a similarity cutoff for combining motifs. 
 
-Specifically, the algorithm uses a [UPGMA clustering](https://en.wikipedia.org/wiki/UPGMA) process with a [euclidean distance](https://en.wikipedia.org/wiki/Euclidean_distance) metric. 
+Specifically, the algorithm uses a [UPGMA clustering](https://en.wikipedia.org/wiki/UPGMA) process with a [euclidean distance](https://en.wikipedia.org/wiki/Euclidean_distance) metric. It also compares motifs using both their given sequence and their [reverse complements](https://en.wikipedia.org/wiki/Complementarity_(molecular_biology)).
 
 ## USAGE
 
