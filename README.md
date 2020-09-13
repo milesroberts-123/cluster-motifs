@@ -21,13 +21,17 @@ to begin the clustering process. A list of motifs will be saved to `clustered_mo
 
 ## INPUT
 
-1. All you need for this to work is a file of motif position weight matricies (PWM) in one of the formats supported by the `universalmotif` package (MEME, HOMER, matrix format, etc.). The `read_meme()` function in `universalmotif` package will accept either minimal MEME format (often output by command line motif finders) or extended MEME format (often output by online MEME suite tools).
+The main function in this script has three arguments:
+
+`ensemble_motifs(motifs, alpha_value, merge_method)`
+
+1. `motifs` should be a list of motifs loaded from a file of position weight matricies (PWM) in one of the formats supported by the `universalmotif` package (MEME, HOMER, matrix format, etc.). The `read_meme()` function in `universalmotif` package will accept either minimal MEME format (often output by command line motif finders) or extended MEME format (often output by online MEME suite tools).
 
 **NOTE:** If you need to convert your motifs into minmal MEME format, see [my other repositories](https://github.com/milesroberts-123?tab=repositories).
 
 2. A number for `alpha_value`, which will define how similar motifs need to be in order to be part of the same cluster.
 
-**NOTE:** I would recommend using a very strict cutoff for combining motifs (the default of 0.99 or higher). Otherwise, you may end up combining many similar motifs and be left with many super long motifs that are basically nonsensical.
+**NOTE:** I would recommend using a very strict cutoff for combining motifs (the default of 0.99 or higher, note that this value cannot exceed 1). Otherwise, you may end up combining many motifs and be left with just a few super long motifs that are basically nonsensical.
 
 3. The method used to combine similar motifs. The methods are listed in the details of the R documentation [here](http://127.0.0.1:24519/library/universalmotif/html/merge_motifs.html). By default, the "ALLR" method in the universalmotif package will be used.
 
