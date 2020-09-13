@@ -1,5 +1,4 @@
 # cluster-motifs
-Cluster redundant motifs in a set of motifs
 
 The motifs returned by *de novo* motif discovery algorithms are often numerous and redundant, making downstream motif analyses more difficult. This repo presents a simple function written in R to combine redundant motifs. The approach is based on hierarchical clustering and uses a bootstrapping approach implemented in [pvclust](https://cran.r-project.org/web/packages/pvclust/pvclust.pdf) to avoid the issue of having to manually choose a similarity cutoff for combining motifs. 
 
