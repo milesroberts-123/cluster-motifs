@@ -11,7 +11,7 @@ Afterwards, if you load your motifs into an R object called `motifs`, you can ca
 
 `clustered_motifs = ensemble_motifs(motifs)`
 
-to begin the clustering process. A list of motifs will be saved to `clustered_motifs` and any motifs that were very similar will have been combined. You can save the output in [minimal MEME-format](http://meme-suite.org/doc/meme-format.html?man_type=web)with:
+to begin the clustering process. A list of motifs will be saved to `clustered_motifs` and any motifs that were very similar will have been combined. You can save the output in [minimal MEME-format](http://meme-suite.org/doc/meme-format.html?man_type=web) with:
 
 `write_meme(clustered_motifs, "my_motifs.meme")`
 
